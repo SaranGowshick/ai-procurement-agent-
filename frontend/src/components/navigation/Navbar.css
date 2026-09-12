@@ -1,0 +1,319 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LEFT EDGE HOVER TRIGGER
+===================================================== */
+
+.sidebar-hover-zone {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 18px;
+  height: 100vh;
+
+  z-index: 2000;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.navbar-sidebar {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 260px;
+  height: 100vh;
+
+  padding: 24px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    180deg,
+    #071a35 0%,
+    #0b2850 55%,
+    #08203f 100%
+  );
+
+  color: white;
+
+  transform: translateX(-100%);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+
+  z-index: 2100;
+
+  box-shadow: none;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   OPEN SIDEBAR
+===================================================== */
+
+.navbar-sidebar-open {
+  transform: translateX(0);
+
+  box-shadow:
+    8px 0 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 4px 8px 26px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  font-size: 20px;
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.logo-text {
+  min-width: 0;
+}
+
+.logo-text h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.logo-text span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.navbar-section-title {
+  margin: 26px 8px 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  flex: 1;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 44px;
+
+  padding: 0 13px;
+
+  border-radius: 10px;
+
+  color: rgba(255, 255, 255, 0.70);
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.navbar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  transform: translateX(2px);
+}
+
+.navbar-link.active {
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.95),
+    rgba(37, 99, 235, 0.75)
+  );
+
+  color: white;
+
+  box-shadow:
+    0 5px 16px rgba(37, 99, 235, 0.20);
+}
+
+.navbar-link svg {
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   BOTTOM STATUS
+===================================================== */
+
+.navbar-bottom {
+  margin-top: auto;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  flex-shrink: 0;
+}
+
+.agent-status {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
+.agent-status strong {
+  display: block;
+
+  font-size: 12px;
+}
+
+.agent-status small {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.navbar-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.navbar-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navbar-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+  .navbar-sidebar {
+    width: 240px;
+  }
+
+  .app-layout.sidebar-open {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+}

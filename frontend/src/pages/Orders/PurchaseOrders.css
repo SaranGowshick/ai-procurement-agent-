@@ -1,0 +1,1051 @@
+/* =========================================================
+   PURCHASE ORDERS PAGE
+========================================================= */
+
+.purchase-orders-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  padding: 32px 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.po-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 20px;
+
+  margin-bottom: 27px;
+}
+
+.po-eyebrow {
+  margin: 0 0 7px;
+
+  color: #2563eb;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.po-header h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.po-header p {
+  margin: 8px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.create-po-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 11px 17px;
+
+  border: none;
+  border-radius: 9px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #0f2a5f,
+    #2563eb
+  );
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(37, 99, 235, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.create-po-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.po-summary-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.po-summary-card {
+  min-width: 0;
+  min-height: 98px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 17px;
+
+  border: 1px solid #e5eaf2;
+  border-radius: 13px;
+
+  background: white;
+
+  box-shadow:
+    0 5px 18px rgba(15, 42, 95, 0.045);
+}
+
+.po-summary-icon {
+  width: 41px;
+  height: 41px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+}
+
+.po-summary-icon.blue {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.po-summary-icon.orange {
+  color: #d97706;
+  background: #fff7ed;
+}
+
+.po-summary-icon.purple {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.po-summary-icon.green {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.po-summary-card span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.po-summary-card strong {
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.po-summary-card small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.po-toolbar {
+  width: 100%;
+
+  display: flex;
+
+  gap: 9px;
+
+  margin-bottom: 16px;
+}
+
+.po-search {
+  flex: 1;
+
+  min-width: 0;
+  max-width: 440px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+
+  background: white;
+}
+
+.po-search svg {
+  flex-shrink: 0;
+
+  color: #94a3b8;
+}
+
+.po-search input {
+  width: 100%;
+  min-width: 0;
+
+  padding: 11px 0;
+
+  border: none;
+  outline: none;
+
+  color: #334155;
+
+  font-size: 12px;
+}
+
+.po-filter-btn,
+.po-select-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+
+  background: white;
+
+  color: #475569;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.po-filter-btn:hover,
+.po-select-btn:hover {
+  border-color: #2563eb;
+
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.po-table-card {
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow:
+    0 5px 18px rgba(15, 42, 95, 0.045);
+}
+
+.po-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.po-table-header h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 16px;
+}
+
+.po-table-header p {
+  margin: 5px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.po-header-count {
+  flex-shrink: 0;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.po-header-count span {
+  color: #334155;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLE RESPONSIVE SCROLL
+========================================================= */
+
+.po-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.po-table {
+  width: 100%;
+
+  min-width: 980px;
+
+  border-collapse: collapse;
+}
+
+.po-table th {
+  padding: 13px 16px;
+
+  text-align: left;
+
+  color: #64748b;
+
+  background: #f8fafc;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+}
+
+.po-table td {
+  padding: 15px 16px;
+
+  border-top: 1px solid #edf0f4;
+
+  color: #475569;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+.po-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.po-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+
+/* =========================================================
+   PO NUMBER
+========================================================= */
+
+.po-number-cell {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.po-file-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+}
+
+.po-number-cell strong {
+  display: block;
+
+  color: #2563eb;
+
+  font-size: 11px;
+}
+
+.po-number-cell span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   SUPPLIER
+========================================================= */
+
+.po-supplier {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #334155;
+
+  font-weight: 600;
+}
+
+.po-supplier-avatar {
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #0f2a5f,
+    #2563eb
+  );
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   ITEMS / AMOUNT
+========================================================= */
+
+.items-count {
+  display: inline-flex;
+
+  min-width: 25px;
+
+  justify-content: center;
+
+  padding: 4px 6px;
+
+  border-radius: 5px;
+
+  color: #475569;
+
+  background: #f1f5f9;
+
+  font-size: 10px;
+}
+
+.po-amount {
+  color: #0f172a;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.po-status {
+  display: inline-flex;
+
+  padding: 6px 9px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.po-status.transit {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.po-status.approved {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.po-status.pending {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.po-status.delivered {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.po-status.draft {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.po-status.cancelled {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.po-actions {
+  display: flex;
+
+  gap: 4px;
+}
+
+.po-actions button {
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 6px;
+
+  color: #64748b;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.po-actions button:hover {
+  color: #2563eb;
+
+  background: #eff6ff;
+}
+
+
+/* =========================================================
+   TABLE FOOTER
+========================================================= */
+
+.po-table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px 20px;
+
+  border-top: 1px solid #edf0f4;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+.po-pagination {
+  display: flex;
+
+  gap: 4px;
+}
+
+.po-pagination button {
+  min-width: 29px;
+  height: 29px;
+
+  padding: 0 7px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+
+  color: #64748b;
+
+  background: white;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.po-pagination button:hover:not(:disabled) {
+  color: #2563eb;
+
+  border-color: #2563eb;
+}
+
+.po-pagination button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.po-pagination button.active {
+  color: white;
+
+  border-color: #2563eb;
+
+  background: #2563eb;
+}
+
+
+/* =========================================================
+   BOTTOM GRID
+========================================================= */
+
+.po-bottom-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(0, 1fr);
+
+  gap: 20px;
+
+  margin-top: 20px;
+}
+
+.po-approval-card,
+.po-workflow-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow:
+    0 5px 18px rgba(15, 42, 95, 0.045);
+}
+
+.po-bottom-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 16px;
+}
+
+.po-bottom-heading h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 15px;
+}
+
+.po-bottom-heading p {
+  margin: 5px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 10px;
+}
+
+.po-bottom-heading > span {
+  flex-shrink: 0;
+
+  padding: 6px 9px;
+
+  border-radius: 15px;
+
+  color: #b45309;
+
+  background: #fef3c7;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   APPROVAL
+========================================================= */
+
+.approval-item {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px 0;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.approval-icon {
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  color: #d97706;
+
+  background: #fff7ed;
+}
+
+.approval-item > div:nth-child(2) {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.approval-item strong {
+  display: block;
+
+  color: #334155;
+
+  font-size: 11px;
+}
+
+.approval-item span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #94a3b8;
+
+  font-size: 9px;
+}
+
+.approval-item button {
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 7px 10px;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   WORKFLOW
+========================================================= */
+
+.po-workflow {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 5px 10px;
+}
+
+.workflow-step {
+  min-width: 65px;
+
+  text-align: center;
+}
+
+.workflow-circle {
+  width: 36px;
+  height: 36px;
+
+  margin: 0 auto 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #dbe2ea;
+  border-radius: 50%;
+
+  color: #94a3b8;
+
+  background: white;
+}
+
+.workflow-step.completed .workflow-circle {
+  color: #16a34a;
+
+  border-color: #86efac;
+
+  background: #f0fdf4;
+}
+
+.workflow-step.active .workflow-circle {
+  color: #2563eb;
+
+  border-color: #93c5fd;
+
+  background: #eff6ff;
+}
+
+.workflow-step span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 9px;
+}
+
+.workflow-step strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #334155;
+
+  font-size: 12px;
+}
+
+.workflow-line {
+  flex: 1;
+
+  min-width: 15px;
+
+  height: 2px;
+
+  margin: 0 5px;
+
+  background: #e2e8f0;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .purchase-orders-page {
+    padding: 28px 30px;
+  }
+
+  .po-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .po-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .purchase-orders-page {
+    padding: 24px;
+  }
+
+  .po-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .create-po-btn {
+    align-self: flex-start;
+  }
+
+  .po-search {
+    max-width: none;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .purchase-orders-page {
+    padding: 20px 16px;
+  }
+
+  .po-header h1 {
+    font-size: 26px;
+  }
+
+  .po-header p {
+    font-size: 13px;
+  }
+
+  .po-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .po-search {
+    flex-basis: 100%;
+
+    width: 100%;
+  }
+
+  .po-filter-btn,
+  .po-select-btn {
+    min-height: 38px;
+  }
+
+  .po-table-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .po-table-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 500px
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .purchase-orders-page {
+    padding: 16px 12px;
+  }
+
+  .po-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-po-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .po-toolbar {
+    flex-direction: column;
+  }
+
+  .po-filter-btn,
+  .po-select-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .po-table {
+    min-width: 900px;
+  }
+
+  .po-bottom-grid {
+    gap: 14px;
+  }
+
+  .po-approval-card,
+  .po-workflow-card {
+    padding: 16px;
+  }
+
+  .po-workflow {
+    overflow-x: auto;
+
+    justify-content: flex-start;
+
+    min-width: 360px;
+  }
+}
