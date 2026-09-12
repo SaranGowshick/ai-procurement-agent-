@@ -17,7 +17,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ai-procurement-agent-">
       <div className={`app-layout ${sidebarOpen ? "sidebar-open" : ""}`}>
         
         <Navbar
