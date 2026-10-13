@@ -1,0 +1,70 @@
+2026-10-14 00:13:15 INFO  [http-nio-4602-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-14 00:13:15 INFO  [http-nio-4602-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-14 00:13:15 INFO  [http-nio-4602-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-10-14 00:16:36 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-14 00:16:36 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-14 00:16:41 INFO  [main] c.a.p.ProcurementApplication - Starting ProcurementApplication using Java 17.0.20.1 with PID 25761 (/Gowshick/Personal/procurement/target/classes started by zumen in /Gowshick/Personal/procurement)
+2026-10-14 00:16:41 DEBUG [main] c.a.p.ProcurementApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-14 00:16:41 INFO  [main] c.a.p.ProcurementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-14 00:16:42 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-10-14 00:16:42 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
+2026-10-14 00:16:42 INFO  [main] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 4602 (http)
+2026-10-14 00:16:42 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4602"]
+2026-10-14 00:16:42 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-14 00:16:42 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-14 00:16:42 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1414 ms
+2026-10-14 00:16:42 DEBUG [main] c.a.p.config.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-10-14 00:16:43 INFO  [main] org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.8.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "7.0.0-38-generic"}, "platform": "Java/Amazon.com Inc./17.0.20.1+12-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='procurement_app', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4f1fb828, com.mongodb.Jep395RecordCodecProvider@6ee5f485, com.mongodb.KotlinCodecProvider@20d19f2c, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-10-14 00:16:43 INFO  [cluster-6ace7c93354cf7467e497ebd-localhost:27017] org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=29878165, minRoundTripTimeNanos=0}
+2026-10-14 00:16:43 TRACE [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.a.p.c.SupplierOnboardingController:
+	{POST [/procurement/addSupplier]}: onBoardSupplier(RequestEntity)
+2026-10-14 00:16:43 TRACE [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-10-14 00:16:43 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2026-10-14 00:16:43 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4602"]
+2026-10-14 00:16:44 INFO  [main] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 4602 (http) with context path '/'
+2026-10-14 00:16:44 INFO  [main] c.a.p.ProcurementApplication - Started ProcurementApplication in 3.528 seconds (process running for 4.673)
+2026-10-14 00:16:48 INFO  [main] c.a.p.config.MongoConnectionConfig - MongoDB connection established successfully.
+2026-10-14 00:17:16 INFO  [http-nio-4602-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-14 00:17:16 INFO  [http-nio-4602-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-14 00:17:16 INFO  [http-nio-4602-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-10-14 00:17:16 INFO  [http-nio-4602-exec-1] c.a.p.config.RequestLoggingFilter - Incoming request: POST /procurement/addSupplier
+2026-10-14 00:17:16 TRACE [http-nio-4602-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ai.procurement.controller.SupplierOnboardingController#onBoardSupplier(RequestEntity)
+2026-10-14 00:17:32 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-14 00:17:32 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-14 00:17:40 INFO  [main] c.a.p.ProcurementApplication - Starting ProcurementApplication using Java 17.0.20.1 with PID 26085 (/Gowshick/Personal/procurement/target/classes started by zumen in /Gowshick/Personal/procurement)
+2026-10-14 00:17:40 DEBUG [main] c.a.p.ProcurementApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-10-14 00:17:40 INFO  [main] c.a.p.ProcurementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-14 00:17:41 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-10-14 00:17:41 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 MongoDB repository interfaces.
+2026-10-14 00:17:41 INFO  [main] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 4602 (http)
+2026-10-14 00:17:41 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-4602"]
+2026-10-14 00:17:41 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-14 00:17:41 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-14 00:17:41 INFO  [main] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1812 ms
+2026-10-14 00:17:42 DEBUG [main] c.a.p.config.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-10-14 00:17:42 INFO  [main] org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.8.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "7.0.0-38-generic"}, "platform": "Java/Amazon.com Inc./17.0.20.1+12-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='procurement_app', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@60928a61], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@27358a19, com.mongodb.Jep395RecordCodecProvider@8077c97, com.mongodb.KotlinCodecProvider@22865072, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@563317c1], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-10-14 00:17:42 INFO  [cluster-6ace7cce47cf0ecd67cf27a3-localhost:27017] org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=29460028, minRoundTripTimeNanos=0}
+2026-10-14 00:17:42 TRACE [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.a.p.c.SupplierOnboardingController:
+	{POST [/procurement/addSupplier]}: onBoardSupplier(RequestEntity)
+2026-10-14 00:17:42 TRACE [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-10-14 00:17:42 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2026-10-14 00:17:43 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-10-14 00:17:43 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-4602"]
+2026-10-14 00:17:43 INFO  [main] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 4602 (http) with context path '/'
+2026-10-14 00:17:43 INFO  [main] c.a.p.ProcurementApplication - Started ProcurementApplication in 4.404 seconds (process running for 5.516)
+2026-10-14 00:17:43 INFO  [main] c.a.p.config.MongoConnectionConfig - MongoDB connection established successfully.
+2026-10-14 00:17:44 INFO  [RMI TCP Connection(1)-192.168.1.3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-14 00:17:44 INFO  [RMI TCP Connection(1)-192.168.1.3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-14 00:17:44 INFO  [RMI TCP Connection(1)-192.168.1.3] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-10-14 00:17:59 INFO  [http-nio-4602-exec-1] c.a.p.config.RequestLoggingFilter - Incoming request: POST /procurement/addSupplier
+2026-10-14 00:17:59 TRACE [http-nio-4602-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ai.procurement.controller.SupplierOnboardingController#onBoardSupplier(RequestEntity)
+2026-10-14 00:27:02 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-14 00:27:02 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
