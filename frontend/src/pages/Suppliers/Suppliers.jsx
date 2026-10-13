@@ -9,6 +9,8 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
+import apiUrl from "../../apiconfig/apiUrl";
+
 import "./Suppliers.css";
 
 function Suppliers() {
@@ -60,6 +62,16 @@ function Suppliers() {
     },
   ];
 
+  const handleApiCall = async () => {
+    try {
+      const data = await apiUrl({}, "/addSupplier");
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
   return (
     <div className="suppliers-page">
 
@@ -79,7 +91,7 @@ function Suppliers() {
           </p>
         </div>
 
-        <button className="add-supplier-button">
+        <button className="add-supplier-button" onClick={handleApiCall}>
           <Plus size={17} />
           Add Supplier
         </button>
